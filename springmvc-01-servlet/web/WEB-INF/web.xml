@@ -12,4 +12,16 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/user</url-pattern>
     </servlet-mapping>
+
+    <!--&lt;!&ndash;session超时时间&ndash;&gt;-->
+    <!--<session-config>-->
+    <!--    <session-timeout>15</session-timeout>-->
+    <!--</session-config>-->
+    
+    <!--&lt;!&ndash;欢迎页&ndash;&gt;-->
+    <!--<welcome-file-list>-->
+    <!--    <welcome-file>index.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
+
+
 </web-app>
