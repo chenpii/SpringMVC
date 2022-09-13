@@ -4,18 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--处理器映射器-->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!--处理器适配器-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
-    <!--视图解析器:DispatcherServlet给他的ModelAndView-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="InternalResourceViewResolver">
-        <!--前缀-->
+    <!--视图解析器 : 模板引擎 Thymeleof Freemarker-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <!-- 前缀 -->
         <property name="prefix" value="/WEB-INF/jsp/"/>
-        <!--后缀-->
+        <!-- 后缀 -->
         <property name="suffix" value=".jsp"/>
     </bean>
 
 
-    <!--Handler-->
+    <!-- BeanNameUrlHandlerMapping :bean  根据bean名称映射  -->
     <bean id="/hello" class="com.kuang.controller.HelloController"/>
 </beans>
