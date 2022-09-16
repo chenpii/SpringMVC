@@ -25,7 +25,7 @@ public class ServletAPITest {
     @GetMapping("/servlet/t3")
     //请求转发
     public void test3(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.setAttribute("msg","/result/t3");
+        request.setAttribute("msg","/servlet/t3");
         request.getRequestDispatcher("/WEB-INF/jsp/test.jsp").forward(request,response);
     }
 
